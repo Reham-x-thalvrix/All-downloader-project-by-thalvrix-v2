@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080b14">
+    <title>NovaDrop - All Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="ambient ambient-one"></div>
+<div class="ambient ambient-two"></div>
+
+<header class="topbar">
+    <a class="brand" href="#">
+        <span class="brand-mark">N</span>
+        <span>NOVADROP</span>
+    </a>
+    <span class="top-pill"><i></i> MULTI-PLATFORM DOWNLOADER</span>
+</header>
+
+<main class="main">
+
+    <section class="hero">
+        <div class="eyebrow">SIMPLE. FAST. CLEAN.</div>
+
+        <h1>Save what you<br><em>love to watch.</em></h1>
+
+        <p class="sub">
+            Paste a public video URL to view available media formats and details.
+        </p>
+
+        <form id="downloadForm" class="search-card">
+
+            <div class="input-wrap">
+                <input
+                    id="videoUrl"
+                    type="url"
+                    placeholder="Paste video URL here..."
+                    required
+                >
+                <button type="button" id="pasteBtn">PASTE</button>
+            </div>
+
+            <button id="submitBtn" class="submit-btn" type="submit">
+                <span>Get Download Links</span>
+                <b>↗</b>
+            </button>
+
+        </form>
+
+        <div class="supported">
+            Works with public video sites supported by yt-dlp
+        </div>
+    </section>
+
+    <section id="status" class="status hidden"></section>
+
+    <section id="result" class="result hidden">
+
+        <div class="result-head">
+            <span class="section-kicker">VIDEO INFORMATION</span>
+            <span class="live-tag">READY</span>
+        </div>
+
+        <div class="video-card">
+
+            <div class="thumb-wrap">
+                <img id="thumbnail" alt="Thumbnail">
+                <span id="duration" class="duration"></span>
+            </div>
+
+            <div class="video-meta">
+                <h2 id="videoTitle"></h2>
+                <p id="uploader"></p>
+
+                <div class="meta-line">
+                    <span id="extension"></span>
+                    <span id="resolution"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="format-head">
+            <div>
+                <span class="section-kicker">AVAILABLE FORMATS</span>
+                <h3>Choose your quality</h3>
+            </div>
+
+            <span id="formatCount" class="format-count"></span>
+        </div>
+
+        <div id="formats" class="formats"></div>
+
+        <p class="expiry-note">
+            Download links may expire. Files are not stored on this server.
+        </p>
+
+    </section>
+
+    <section class="features">
+
+        <div class="feature">
+            <span class="feature-icon">✦</span>
+            <div>
+                <b>Rich Details</b>
+                <small>Thumbnail, title and duration</small>
+            </div>
+        </div>
+
+        <div class="feature">
+            <span class="feature-icon">↗</span>
+            <div>
+                <b>Format Choices</b>
+                <small>Available quality and file types</small>
+            </div>
+        </div>
+
+        <div class="feature">
+            <span class="feature-icon">⌁</span>
+            <div>
+                <b>API Included</b>
+                <small>JSON response with CORS</small>
+            </div>
+        </div>
+
+    </section>
+
+    <p class="legal">
+        Use only content you own or are authorized to download.
+        Respect copyright and platform terms.
+    </p>
+
+</main>
+
+<footer>
+    <span>© 2026 NOVADROP</span>
+    <span>POWERED BY yt-dlp</span>
+</footer>
+
+<script src="/app.js"></script>
+
+</body>
+</html>
